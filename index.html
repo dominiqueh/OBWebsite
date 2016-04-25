@@ -3,41 +3,52 @@
 <head>
   <meta charset="utf-8">
 
-  <!--  =+=+=+==+=+=+==+=+=+=     Styles and libraries linked     =+=+=+==+=+=+==+=+=+= -->
+  <!--  ============================================================
+  Styles and libraries linked
+  ============================================================== -->
 
   <!-- Functionality Links -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
 
   <!-- Styling Links -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Redressed|Josefin+Sans" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">  <link rel="stylesheet" type="text/css" href="css/main.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway|Abril+Fatface|Allerta+Stencil' rel='stylesheet' type='text/css'>
   <!-- End of Links -->
 
   <title>OneBoard</title>
 </head>
 <body ng-controller="artCtrl" class="container-fluid">
 
-  <!--  =+=+=+==+=+=+==+=+=+=     Navigation Bar      =+=+=+==+=+=+==+=+=+= -->
+  <!--  ============================================================
+  Navigation Bar
+  ============================================================== -->
 
-  <nav class="navbar navbar-default navbar-fixed-top nav-tabs" role="navigation">
-      <div class="navbar-header">
-        <a ui-sref-active="active" ui-sref="home" class="navbar-brand"> OB </a>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="navbar-wrapper">
+        <a ui-sref="home" class="brand-logo">  OB </a>
+        <!-- Below line collapses right nav to burger icon for phones, needs other line in js file to work-->
+        <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a ui-sref="locate">LOCATE</a></li>
+          <li><a ui-sref="news">NEWS</a></li>
+          <li><a ui-sref="contact">CONTACT</a></li>
+        </ul>
       </div>
-      <ul class="nav navbar-nav">
-        <li><a ui-sref-active="active" ui-sref="portfolio">LOCATE</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a ui-sref="blog">CENTERS</a></li>
-        <li><a ui-sref-active="active" ui-sref="contact"><span class="glyphicon glyphicon-envelope"></span>CONTACT</a></li>
-      </ul>
-  </nav>
-
-
-  <!--  =+=+=+==+=+=+==+=+=+=     Body      =+=+=+==+=+=+==+=+=+= -->
-  <div ui-view class="content-container">
-    <!-- Partials will fill in content here -->
+    </nav>
   </div>
+
+
+  <!--  ============================================================
+  Body
+  ============================================================== -->
+  <!-- <div ui-view class="content-container">
+     Partials will fill in content here
+ </div>  -->
+ <div class="parallax-container">
+   <div class="parallax"><img src="images/missing_persons.jpeg"></div>
+ </div>
+
 
   <!--  =+=+=+==+=+=+==+=+=+=     End of Body      =+=+=+==+=+=+==+=+=+= -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.js"></script>

@@ -2,4 +2,4 @@
 /* Linking in All Modules ******************************************************************* */
 /* ************************************************************************** */
 
-angular.module('artApp', ['appRoutes','photo'])
+angular.module('oneBoardApp', ['appRoutes','photo'])
